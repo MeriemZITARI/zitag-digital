@@ -9,7 +9,7 @@ const Navbar = () => {
         href="#home"
         className="text-xl font-bold hover:opacity-80 transition"
       >
-        <span>ZITAG</span>{" "}
+        <span className="tracking-wide">ZITAG</span>
         <span className="text-primary">Digital</span>
       </a>
 

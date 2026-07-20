@@ -7,7 +7,7 @@ const projects = [
     {
       id: 1,
 
-      title: "Site vtrine cabinet paramédical",
+      title: "Site vitrine cabinet paramédical",
       description:
         "Création d’un site vitrine one-page moderne et responsive avec un travail particulier sur le référencement naturel, les performances et l’accessibilité.",
       highlights: [
