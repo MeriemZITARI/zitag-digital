@@ -8,6 +8,7 @@ import {
 
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { Turnstile } from "react-turnstile";
 
 const contactInfos = [
     {
@@ -41,12 +42,23 @@ export default function ContactSection() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 const [error, setError] = useState("");
+const [captchaToken, setCaptchaToken] =
+        useState<string | null>(null);
+
+    const turnstileSiteKey =
+        import.meta.env.VITE_TURNSTILE_SITE_KEY;
 
 const handleSubmit = async (
     event: React.FormEvent<HTMLFormElement>
 ) => {
 
     event.preventDefault();
+    if (!captchaToken) {
+        setError(
+            "Veuillez confirmer que vous n'êtes pas un robot."
+        );
+        return;
+    }
 
     setIsSubmitting(true);
     setIsSuccess(false);
@@ -92,6 +104,7 @@ const handleSubmit = async (
         setIsSubmitting(false);
 
     }
+    
 };
 
     return (
@@ -282,6 +295,7 @@ et les solutions les plus adaptées.</p>
         Votre demande a bien été reçue.
         Je vous répondrai dans les meilleurs délais.
     </p>
+   
 
     <button
         type="button"
@@ -445,7 +459,17 @@ et les solutions les plus adaptées.</p>
                             />
 
                         </div>
-
+                        {turnstileSiteKey && (
+   <Turnstile
+   sitekey={turnstileSiteKey}
+   onVerify={(token) => {
+       setCaptchaToken(token);
+   }}
+   onExpire={() => {
+       setCaptchaToken(null);
+   }}
+/>
+)}
 
                         <button
     type="submit"
