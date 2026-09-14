@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react"
-import img from "../assets/Hero_img_ZITAG.png"
+import img from "../assets/Hero_img_ZITAG.webp"
 
 const Home = () => {
   return (

@@ -14,8 +14,8 @@ const contactInfos = [
     {
         id: 1,
         label: "Email",
-        value: "meriem.taguia@gmail.com",
-        href: "mailto:meriem.taguia@gmail.com",
+        value: "contact@zitag.fr",
+        href: "mailto:contact@zitag.fr",
         icon: <Mail className="text-primary w-6 h-6" />,
     },
     {
