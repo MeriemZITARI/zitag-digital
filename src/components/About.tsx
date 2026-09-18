@@ -34,7 +34,8 @@ const aboutSections = [
 const About = () => {
   return (
     <section
-      id="about"
+        id="about"
+  aria-labelledby="about-title"
       className="
         bg-base-200
         py-20
@@ -67,7 +68,7 @@ const About = () => {
             L’esprit ZITAG Digital
           </p>
 
-          <h2 className="
+          <h3 className="
             text-3xl
             md:text-4xl
             font-bold
@@ -77,7 +78,7 @@ const About = () => {
             <span className="text-primary">
               {" "}et technique
             </span>
-          </h2>
+          </h3>
 
           <p className="
             text-base

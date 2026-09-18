@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import ContactSection from "./components/ContactSection";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer"
+import SeoSchema from "./components/SeoSchema";
 
 
 
@@ -13,6 +14,7 @@ function App() {
  
   return (
     <div>
+      <SeoSchema />
         <div className="p-5 md:px-[15%]">
         <Navbar />
         <Home />

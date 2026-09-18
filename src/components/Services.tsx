@@ -53,13 +53,14 @@ const Services = () => {
   return (
     <section
       id="services"
+      aria-labelledby="title-services"
       className="
         py-20
         px-6
         
       "
     >
-      <Title id="title-services" title="Services" level="h2" />
+      <Title id="title-services" title="Services"  level="h2" />
 
       {/* Intro */}
       <div
@@ -82,7 +83,7 @@ const Services = () => {
           Ce que nous proposons
         </p>
 
-        <h2
+        <h3
           className="
             text-3xl
             md:text-4xl
@@ -94,7 +95,7 @@ const Services = () => {
           <span className="text-primary">
             {" "}à vos besoins
           </span>
-        </h2>
+        </h3>
 
         <p
           className="
@@ -197,7 +198,7 @@ const Services = () => {
         "
       >
 
-        <h3
+        <p
           className="
             text-2xl
             font-bold
@@ -205,7 +206,7 @@ const Services = () => {
           "
         >
           Un projet en tête ?
-        </h3>
+        </p>
 
         <p
           className="

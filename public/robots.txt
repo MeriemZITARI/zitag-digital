@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Lien vers ton Sitemap officiel
+Sitemap: https://zitag.fr/sitemap.xml

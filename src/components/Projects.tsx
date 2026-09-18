@@ -1,7 +1,7 @@
 import Title from "./Title";
 import { FolderGit2, ExternalLink } from "lucide-react";
-import KineImage from "../assets/kineImage.png";
-import cineDelicesImages from "../assets/cineDelicesImage.png"
+import KineImage from "../assets/kineImage.webp";
+import cineDelicesImages from "../assets/cineDelicesImage.webp"
 
 const projects = [
     {
@@ -24,6 +24,8 @@ const projects = [
       demoLink: "https://centre-sante-epernon.netlify.app/",
       repoLink: "https://github.com/MeriemZITARI/healthCenter",
       image: KineImage,
+      imageWidth: 390,
+      imageHeight: 181,
     },
     {
       id: 2,
@@ -47,6 +49,8 @@ const projects = [
       demoLink: "https://frontend-o5gt.onrender.com",
       repoLink: "https://github.com/MeriemZITARI/Cine-Delices-MeriemZITARI",
       image: cineDelicesImages,
+      imageWidth: 1894,
+  imageHeight: 730,
     },
   ];
 
@@ -54,12 +58,14 @@ const Projects = () => {
   return (
     <section
       id="projects"
+      aria-labelledby="projects-title"
       className="  bg-base-200
         py-20
         px-6
         lg:px-12"
     >
-      <Title title="Mes projets" />
+      <Title title="Mes projets"    id="projects-title"
+    level="h2"/>
 
       <div className="grid gap-8 lg:grid-cols-2 mt-10">
         {projects.map((project) => (
@@ -79,11 +85,14 @@ const Projects = () => {
           >
             <img
               src={project.image}
-              alt={project.title}
+              alt={`Aperçu du projet ${project.title}`}
+              loading="lazy"
+              decoding="async"
               className="
                 w-full
-                h-96
+                h-64 md:h-80
                 object-cover
+                object-top
               "
             />
 
@@ -115,7 +124,7 @@ const Projects = () => {
                     key={item}
                     className="text-sm flex items-center gap-2"
                   >
-                    <span>✓</span>
+                    <span  aria-hidden="true">✓</span>
                     {item}
                   </li>
                 ))}

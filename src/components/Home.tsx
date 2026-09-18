@@ -1,9 +1,9 @@
 import { Mail } from "lucide-react"
-import img from "../assets/Hero_img_ZITAG.webp"
+import img from "../assets/Hero_img_ZITAG_comp.webp"
 
 const Home = () => {
   return (
-    <div id= "home" className="
+    <section id= "home"   aria-labelledby="home-title" className="
     flex flex-col-reverse lg:flex-row
     items-center
     justify-between
@@ -21,7 +21,7 @@ const Home = () => {
         Agence digitale
       </p>
   
-      <h1 className="
+      <h1   id="home-title" className="
         text-4xl sm:text-5xl lg:text-6xl
         font-bold
         text-center lg:text-left
@@ -76,9 +76,13 @@ const Home = () => {
     ">
       <img
         src={img}
-        alt="ZITAG Digital"
+        alt="Équipe travaillant sur des projets digitaux et de développement web"
+        width={1402}
+        height={1122}
+        fetchPriority="high"
         className="
           w-full
+          h-auto
           max-w-sm
           md:max-w-lg
           xl:max-w-2xl
@@ -89,7 +93,7 @@ const Home = () => {
       />
     </div>
   
-  </div>
+  </section>
   )
 }
 
