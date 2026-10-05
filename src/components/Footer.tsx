@@ -9,7 +9,7 @@ const Footer = () => {
 
         {/* Nom */}
         <h2 className="text-2xl font-bold">
-        <span className="tracking-wide">ZITAG</span><span className="text-primary">Digital</span>
+        <span className="tracking-wide">ZITAG</span><span className="text-primary">DIGITAL</span>
         </h2>
 
         {/* Slogan */}
@@ -40,7 +40,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="meriem.taguia@gmail.com"
+            href="contact@zitag.fr"
             aria-label="Email"
             className="transition-transform duration-200 hover:scale-110 hover:text-primary"
           >
@@ -50,7 +50,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <p className="pt-3 text-xs text-base-content/60">
-          © {new Date().getFullYear()} ZITAG Digital — Tous droits réservés.
+          © {new Date().getFullYear()} ZITAG DIGITAL — Tous droits réservés.
         </p>
       </aside>
     </footer>

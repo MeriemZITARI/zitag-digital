@@ -10,7 +10,7 @@ const Navbar = () => {
         className="text-xl font-bold hover:opacity-80 transition"
       >
         <span className="tracking-wide">ZITAG</span>
-        <span className="text-primary">Digital</span>
+        <span className="text-primary">DIGITAL</span>
       </a>
 
       {/* Navigation Desktop */}
