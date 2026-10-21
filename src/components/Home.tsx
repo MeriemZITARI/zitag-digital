@@ -41,16 +41,11 @@ const Home = () => {
         text-center lg:text-left
         leading-relaxed
       ">
-        ZITAG Digital accompagne les entreprises
-        dans la conception, le développement
-        et l’optimisation de sites web et
-        d’applications modernes.
+        ZITAG DIGITAL accompagne les professionnels et les entreprises dans la conception, le développement et l’optimisation de sites web et de solutions digitales adaptées à leurs besoins.
   
         <br /><br />
   
-        Fondée par Meriem, développeuse fullstack,
-        l’agence allie expertise technique et
-        approche centrée utilisateur.
+        Chaque projet associe expertise technique, expérience utilisateur et accompagnement personnalisé pour créer des solutions web utiles, performantes et durables.
       </p>
   
       <a

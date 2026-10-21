@@ -59,7 +59,7 @@ const Projects = () => {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="  bg-base-200
+      className=" 
         py-20
         px-6
         lg:px-12"

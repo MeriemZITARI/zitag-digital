@@ -1,9 +1,10 @@
-import {  Mail } from "lucide-react";
+import {  Mail, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
+  const googleMapsUrl = "https://maps.app.goo.gl/SeE5iMj37CJanjJh6";
   return (
-    <footer className="footer footer-center bg-base-200 text-base-content px-6 py-10">
+    <footer className="footer footer-center text-base-content px-6 py-10">
       <aside className="space-y-3">
         
 
@@ -37,6 +38,18 @@ const Footer = () => {
             className="transition-transform duration-200 hover:scale-110 hover:text-primary"
           >
             <FaLinkedin className="w-6 h-6" />
+          </a>
+
+          {/* Lien Fiche Google Maps */}
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Google Business Profile - ZITAG DIGITAL"
+            title="Retrouvez ZITAG DIGITAL sur Google Maps"
+            className="transition-transform duration-200 hover:scale-110 hover:text-primary"
+          >
+            <MapPin className="w-6 h-6" />
           </a>
 
           <a

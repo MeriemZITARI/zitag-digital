@@ -10,7 +10,7 @@ const aboutSections = [
     id: 1,
     title: "Notre vision",
     description:
-      "Créer des solutions digitales modernes, accessibles et pensées pour accompagner durablement les projets de nos clients.",
+      "Concevoir un numérique utile et accessible, qui simplifie les usages, valorise les activités de nos clients et accompagne leur évolution dans le temps.",
     icon: <Compass className="text-primary w-8 h-8" />,
   },
 
@@ -18,7 +18,7 @@ const aboutSections = [
     id: 2,
     title: "Notre approche",
     description:
-      "Chaque projet est développé avec une compréhension des besoins métier, des utilisateurs et des objectifs à atteindre.",
+      "Privilégier une démarche structurée, de l'analyse des besoins aux choix de conception, pour élaborer des solutions adaptées à chaque activité et à ses contraintes.",
     icon: <Lightbulb className="text-primary w-8 h-8" />,
   },
 
@@ -26,7 +26,7 @@ const aboutSections = [
     id: 3,
     title: "Nos engagements",
     description:
-      "Concevoir des expériences fiables, évolutives et centrées sur la qualité du développement.",
+      "Assurer un suivi attentif à chaque étape du projet, avec des échanges transparents, des réalisations soignées et des solutions conçues pour durer.",
     icon: <HeartHandshake className="text-primary w-8 h-8" />,
   },
 ];
@@ -65,7 +65,7 @@ const About = () => {
             text-sm
             mb-4
           ">
-            L’esprit ZITAG Digital
+            L’esprit ZITAG DIGITAL
           </p>
 
           <h3 className="
@@ -85,20 +85,12 @@ const About = () => {
             leading-relaxed
             text-base-content/80
           ">
-            ZITAG Digital est née de la volonté de
-            concevoir des solutions numériques qui
-            allient expertise technique, accessibilité
-            et compréhension des besoins réels des
-            entreprises.
+            ZITAG DIGITAL place la compréhension des besoins et des usages au cœur de sa démarche. Chaque projet est abordé avec une réflexion approfondie sur les objectifs à atteindre et les attentes des utilisateurs.
 
             <br />
             <br />
 
-            Fondée par une développeuse full-stack,
-            l’agence construit chaque projet avec
-            une attention particulière portée à
-            l’expérience utilisateur, à la performance
-            et à la qualité du développement.
+            Fondée par une développeuse full-stack, ZITAG DIGITAL accorde une attention particulière à la performance et à la qualité de chaque réalisation, tout en privilégiant une collaboration fondée sur l’écoute, la confiance et la compréhension des besoins de ses clients.
           </p>
 
         </div>

@@ -112,7 +112,7 @@ const handleSubmit = async (
         <section
             id="contact"
             aria-labelledby="contact-title"
-            className="
+            className=" bg-base-200
             
                 py-20
                 px-6

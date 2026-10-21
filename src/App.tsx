@@ -6,6 +6,7 @@ import ContactSection from "./components/ContactSection";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer"
 import SeoSchema from "./components/SeoSchema";
+import Offres from "./components/Offres"
 
 
 
@@ -25,6 +26,9 @@ function App() {
       </div>
       <div className="p-5 md:px-[15%]">
       <Services />
+      </ div>
+      <div >
+      <Offres/>
       </ div>
       <div>
       <Projects/>

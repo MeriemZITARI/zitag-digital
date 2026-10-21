@@ -12,15 +12,15 @@ const services = [
     id: 1,
     title: "Création de sites web",
     description:
-      "Des sites modernes, performants et adaptés aux objectifs de votre activité.",
+      "Des sites vitrines sur mesure, responsive et optimisés pour le référencement naturel, conçus pour présenter votre activité et renforcer votre présence en ligne.",
     icon: <Globe className="text-primary w-8 h-8" />,
   },
 
   {
     id: 2,
-    title: "Solutions digitales sur mesure",
+    title: "Développement de solutions personnalisées",
     description:
-      "Des outils numériques personnalisés pour répondre à vos besoins spécifiques.",
+      "Des fonctionnalités et des applications web adaptées à vos besoins métier pour simplifier vos processus et répondre à des usages spécifiques.",
     icon: <Laptop className="text-primary w-8 h-8" />,
   },
 
@@ -28,7 +28,7 @@ const services = [
     id: 3,
     title: "Optimisation & expérience utilisateur",
     description:
-      "Des interfaces rapides, accessibles et pensées pour améliorer l’expérience de vos utilisateurs.",
+      "Amélioration des performances, de l'accessibilité et de l'ergonomie pour rendre votre site plus rapide, plus agréable à utiliser et plus efficace.",
     icon: <Gauge className="text-primary w-8 h-8" />,
   },
 
@@ -36,7 +36,7 @@ const services = [
     id: 4,
     title: "Maintenance & évolution",
     description:
-      "Un accompagnement après lancement pour faire évoluer durablement vos solutions.",
+      "Mises à jour, corrections et améliorations pour maintenir votre site en bon état de fonctionnement et l'adapter aux besoins de votre activité.",
     icon: <Wrench className="text-primary w-8 h-8" />,
   },
 
@@ -44,7 +44,7 @@ const services = [
     id: 5,
     title: "Accompagnement technique",
     description:
-      "Analyse, optimisation et amélioration de solutions existantes pour répondre à de nouveaux besoins.",
+      "Analyse de vos besoins, recommandations techniques et aide à la définition des solutions les plus adaptées à votre projet.",
     icon: <Handshake className="text-primary w-8 h-8" />,
   },
 ];
@@ -91,9 +91,9 @@ const Services = () => {
             mb-6
           "
         >
-          Des solutions adaptées
+          Des solutions web pensées
           <span className="text-primary">
-            {" "}à vos besoins
+            {" "}pour votre activité
           </span>
         </h3>
 
@@ -104,12 +104,7 @@ const Services = () => {
             text-base-content/80
           "
         >
-          Chaque projet est unique.
-          ZITAG Digital accompagne
-          les entreprises dans la création,
-          l’optimisation et l’évolution
-          de solutions numériques pensées
-          pour répondre à leurs objectifs.
+          De la création de votre site web à l'amélioration de vos outils existants, ZITAG DIGITAL vous accompagne avec des solutions adaptées à vos objectifs, à vos utilisateurs et à votre activité.
         </p>
 
       </div>
