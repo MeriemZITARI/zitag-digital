@@ -111,9 +111,9 @@ const offres = [
 
 const Offres = () => {
   // Gestion de l'état d'ouverture pour chaque carte
-  const [openCards, setOpenCards] = useState({});
+  const [openCards, setOpenCards] = useState<Record<number, boolean>>({});
 
-  const toggleCard = (id) => {
+  const toggleCard = (id : number) => {
     setOpenCards((prev) => ({
       ...prev,
       [id]: !prev[id],
