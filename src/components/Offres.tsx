@@ -12,7 +12,7 @@ import {
 const offres = [
   {
     id: 1,
-    title: "Vitrine Essentiel",
+    title: " site Vitrine Essentiel",
     description:
       "Inaugurez votre présence en ligne avec un site propre, rapide et moderne.",
     price: "790 €",
@@ -20,23 +20,23 @@ const offres = [
     ctaText: "Choisir cette offre",
     featured: false,
     highlights: [
-      "Design sur-mesure & adapté tous écrans",
+      "Design sur-mesure & adapté tous écrans (mobile/tablette)",
       "Site sécurisé (HTTPS / SSL)",
-      "Nom de domaine & hébergement offerts",
+      "Nom de domaine & hébergement inclus (1 an)",
       "Adresse e-mail professionnelle dédiée",
-      "Référencement (SEO) de base inclus",
+      "Référencement (SEO) de base",
     ],
     details: [
       "Structure de 1 à 5 pages (ou format One-Page)",
       "Formulaire de contact + carte interactive de localisation",
       "Intégration de vos réseaux sociaux & identité visuelle",
-      "Site ultra-rapide & fluide (optimisation performances)",
-      "Indexation sur les moteurs de recherche & sitemap",
+      "Optimisation des performances & chargement ultra-rapide",
+      "Indexation Google Search Console & fichier sitemap",
     ],
   },
   {
     id: 2,
-    title: "Vitrine & Visibilité",
+    title: " Site Vitrine & Visibilité",
     description:
       "Attirez de nouveaux clients grâce à un référencement ciblé et une visibilité locale renforcée.",
     price: "1 290 €",
@@ -46,10 +46,10 @@ const offres = [
     badge: "Recommandé",
     highlights: [
       "Tout le pack Essentiel inclus (jusqu'à 7 pages)",
-      "Référencement naturel (SEO) avancé",
-      "Création & optimisation Fiche Google",
-      "Intégration dynamique des avis clients",
-      "Stratégie d'acquisition locale",
+      "Référencement naturel (SEO) avancé & mots-clés",
+      "Création & optimisation Fiche Google Business Profile",
+      "Intégration dynamique de vos avis clients Google",
+      "Stratégie d'acquisition locale & nationale",
     ],
     details: [
       "Positionnement ciblé sur vos mots-clés stratégiques",
@@ -61,9 +61,9 @@ const offres = [
   },
   {
     id: 3,
-    title: "Sur-Mesure & Web Apps",
+    title: "E-Commerce & Web Apps",
     description:
-      "Développez des solutions complexes, des plateformes métier ou un e-commerce performant.",
+     "Développez votre boutique en ligne performante, un SaaS ou une application web métier.",
     price: "Sur devis",
     icon: <Code2 className="text-primary w-8 h-8" />,
     ctaText: "Demander un devis",
@@ -79,7 +79,7 @@ const offres = [
       "Développement full-stack sur-mesure sans contraintes",
       "Connexion aux outils externes (CRM, ERP, systèmes de paiement)",
       "Panneau d'administration (Back-Office) dédié et intuitif",
-      "Phase de tests approfondis, recette & accompagnement au lancement",
+      "Phase de tests approfondis & accompagnement au lancement",
       "Documentation technique & formation à la prise en main",
     ],
   },
@@ -87,21 +87,21 @@ const offres = [
     id: 4,
     title: "Maintenance & Support",
     description:
-      "Gardez votre site sécurisé, performant et à jour sans vous soucier de la technique.",
+      "Gardez votre site sécurisé, performant et à jour sans contraintes techniques.",
     price: "Selon l'offre",
     icon: <Wrench className="text-primary w-8 h-8" />,
     ctaText: "S'abonner",
     featured: false,
     highlights: [
-      "Mises à jour & sauvegardes automatiques",
+      "Mises à jour techniques & sauvegardes régulières",
       "Sécurité renforcée & protection anti-piratage",
-      "Surveillance de la disponibilité en continu",
+      "Surveillance de la disponibilité du site en continu",
       "Support technique réactif & accompagnement",
       "Modifications de contenu mensuelles incluses",
     ],
     details: [
       "Restauration rapide et garantie en cas d'incident ou panne",
-      "Correctifs de sécurité, nettoyage préventif & mises à niveau",
+      "Correctifs de sécurité, nettoyage préventif du code",
       "Petites mises à jour & ajustements de contenu à la demande",
       "Suivi des performances, vitesse & bilan mensuel d'activité",
       "Conseils d'évolution continue pour faire évoluer votre site",
@@ -130,16 +130,17 @@ const Offres = () => {
 
       {/* Intro */}
       <div className="text-center max-w-3xl mx-auto mb-16">
+      <p className="uppercase text-primary font-semibold text-sm mb-4">
+          Tarifs & Formules
+        </p>
        
 
         <h3 className="text-3xl md:text-4xl font-bold mb-6">
-          Une offre pour <span className="text-primary">chaque besoin</span>
+          Des formules claires pour la <span className="text-primary">création de votre site web</span>
         </h3>
 
         <p className="text-base leading-relaxed text-base-content/80">
-          Que vous lanciez votre activité ou souhaitiez développer des
-          fonctionnalités sur-mesure, découvrez des formules claires, évolutives
-          et adaptées à vos objectifs.
+          Que vous soyez à <strong>Épernon, en Eure-et-Loir ou partout en France</strong>, <strong>ZITAG DIGITAL</strong> vous propose des offres transparentes et adaptées à vos objectifs de visibilité et de croissance.
         </p>
       </div>
 
@@ -212,10 +213,21 @@ const Offres = () => {
                 ))}
               </ul>
 
-              {/* Bouton CTA */}
-              <a href="#contact" className="btn btn-primary w-full mb-3">
-                {offre.ctaText}
-              </a>
+           {/* Bouton CTA dynamique */}
+<button
+  type="button"
+  onClick={() => {
+    // 1. Déclencher l'événement pour changer le sujet dans ContactSection
+    window.dispatchEvent(
+      new CustomEvent("preselectSubject", { detail: offre.title })
+    );
+    // 2. Faire défiler la page vers la section contact en douceur
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="btn btn-primary w-full mb-3"
+>
+  {offre.ctaText}
+</button>
 
               {/* Bouton Dépliable (En savoir plus) */}
               <button

@@ -90,7 +90,7 @@ const About = () => {
             <br />
             <br />
 
-            Fondée par une développeuse full-stack, ZITAG DIGITAL accorde une attention particulière à la performance et à la qualité de chaque réalisation, tout en privilégiant une collaboration fondée sur l’écoute, la confiance et la compréhension des besoins de ses clients.
+            Fondée à Épernon par une développeuse full-stack, ZITAG DIGITAL accorde une attention particulière à la performance et à la qualité de chaque réalisation, tout en privilégiant une collaboration fondée sur l’écoute, la confiance et la compréhension des besoins de ses clients.
           </p>
 
         </div>

@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/meriemtaguia/"
+            href="https://www.linkedin.com/company/zitag-digital/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -53,8 +53,8 @@ const Footer = () => {
           </a>
 
           <a
-            href="contact@zitag.fr"
-            aria-label="Email"
+            href="mailto:contact@zitag.fr"
+            aria-label="Envoyer un e-mail à ZITAG Digital"
             className="transition-transform duration-200 hover:scale-110 hover:text-primary"
           >
             <Mail className="w-6 h-6" />

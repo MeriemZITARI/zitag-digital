@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Title from "./Title";
 import {
   Globe,
@@ -10,46 +11,57 @@ import {
 const services = [
   {
     id: 1,
-    title: "Création de sites web",
+    title: "Création de sites vitrines & e-commerce",
     description:
-      "Des sites vitrines sur mesure, responsive et optimisés pour le référencement naturel, conçus pour présenter votre activité et renforcer votre présence en ligne.",
+      "Conception de sites internet sur mesure, responsive et optimisés pour le référencement naturel (SEO), conçus pour valoriser votre activité et générer des contacts qualifiés.",
     icon: <Globe className="text-primary w-8 h-8" />,
   },
 
   {
     id: 2,
-    title: "Développement de solutions personnalisées",
+    title: "Développement d'applications web & sur-mesure",
     description:
-      "Des fonctionnalités et des applications web adaptées à vos besoins métier pour simplifier vos processus et répondre à des usages spécifiques.",
+      "Conception de fonctionnalités avancées, SaaS et plateformes web adaptées à vos processus métier pour simplifier votre quotidien et répondre à des besoins complexes.",
     icon: <Laptop className="text-primary w-8 h-8" />,
   },
 
   {
     id: 3,
-    title: "Optimisation & expérience utilisateur",
+    title: "Audit SEO & Performances web",
     description:
-      "Amélioration des performances, de l'accessibilité et de l'ergonomie pour rendre votre site plus rapide, plus agréable à utiliser et plus efficace.",
+      "Amélioration de votre positionnement sur Google, de la vitesse de chargement et de l'accessibilité pour rendre votre site plus visible, plus rapide et plus rentable.",
     icon: <Gauge className="text-primary w-8 h-8" />,
   },
 
   {
     id: 4,
-    title: "Maintenance & évolution",
+    title: "Maintenance, sécurité & évolution",
     description:
-      "Mises à jour, corrections et améliorations pour maintenir votre site en bon état de fonctionnement et l'adapter aux besoins de votre activité.",
+      "Mises à jour régulières, corrections et optimisations continues pour garantir la sécurité de votre site et le faire évoluer au rythme de votre entreprise.",
     icon: <Wrench className="text-primary w-8 h-8" />,
   },
 
   {
     id: 5,
-    title: "Accompagnement technique",
+    title: "Conseil & Accompagnement technique",
     description:
-      "Analyse de vos besoins, recommandations techniques et aide à la définition des solutions les plus adaptées à votre projet.",
+      "Analyse de vos besoins, choix des meilleures technologies et accompagnement pas à pas pour structurer sereinement votre projet digital.",
     icon: <Handshake className="text-primary w-8 h-8" />,
   },
 ];
 
 const Services = () => {
+  // Gestion du scroll automatique si l'URL contient #services
+  useEffect(() => {
+    if (window.location.hash === "#services") {
+        setTimeout(() => {
+            const servicesElement = document.getElementById("services");
+            if (servicesElement) {
+                servicesElement.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100);
+    }
+}, []);
   return (
     <section
       id="services"
@@ -57,10 +69,9 @@ const Services = () => {
       className="
         py-20
         px-6
-        
       "
     >
-      <Title id="title-services" title="Services"  level="h2" />
+      <Title id="title-services" title="Services" level="h2" />
 
       {/* Intro */}
       <div
@@ -91,9 +102,9 @@ const Services = () => {
             mb-6
           "
         >
-          Des solutions web pensées
+          Des services web complets pour
           <span className="text-primary">
-            {" "}pour votre activité
+            {" "}développer votre activité
           </span>
         </h3>
 
@@ -104,11 +115,9 @@ const Services = () => {
             text-base-content/80
           "
         >
-          De la création de votre site web à l'amélioration de vos outils existants, ZITAG DIGITAL vous accompagne avec des solutions adaptées à vos objectifs, à vos utilisateurs et à votre activité.
+          De la création de votre site vitrine ou boutique en ligne à l'optimisation d'outils sur-mesure, <strong>ZITAG DIGITAL</strong> vous apporte des solutions performantes et pérennes.
         </p>
-
       </div>
-
 
       {/* Cartes */}
       <div
@@ -121,9 +130,7 @@ const Services = () => {
           mx-auto
         "
       >
-
         {services.map((service) => (
-
           <div
             key={service.id}
             className="
@@ -143,7 +150,6 @@ const Services = () => {
               hover:border-primary/40
             "
           >
-
             <div
               className="
                 mb-6
@@ -157,7 +163,6 @@ const Services = () => {
               {service.icon}
             </div>
 
-
             <h3
               className="
                 text-xl
@@ -168,7 +173,6 @@ const Services = () => {
               {service.title}
             </h3>
 
-
             <p
               className="
                 text-base-content/70
@@ -177,13 +181,9 @@ const Services = () => {
             >
               {service.description}
             </p>
-
           </div>
-
         ))}
-
       </div>
-
 
       {/* CTA */}
       <div
@@ -192,7 +192,6 @@ const Services = () => {
           mt-20
         "
       >
-
         <p
           className="
             text-2xl
@@ -200,7 +199,7 @@ const Services = () => {
             mb-4
           "
         >
-          Un projet en tête ?
+          Un projet de site ou d'application web ?
         </p>
 
         <p
@@ -209,8 +208,7 @@ const Services = () => {
             mb-6
           "
         >
-          Parlons ensemble de vos besoins
-          et imaginons une solution adaptée.
+          Que vous soyez à Épernon, en Eure-et-Loir ou ailleurs en France, échangeons sur vos besoins.
         </p>
 
         <a
@@ -220,11 +218,9 @@ const Services = () => {
             btn-primary
           "
         >
-          Parlons de votre projet
+          Discuter de mon projet
         </a>
-
       </div>
-
     </section>
   );
 };
